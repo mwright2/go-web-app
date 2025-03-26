@@ -3,7 +3,7 @@ package templates
 import "mjuniorw/web/templates/layouts"
 
 templ Home() {
-    @layouts.BaseLayout() {
+    @layouts.AnonymousLayout("Welcome!") {
         <h1>Hello, templ!!!</h1>
     }
 }
