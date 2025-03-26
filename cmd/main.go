@@ -16,6 +16,7 @@ func render(status int, c *gin.Context, template templ.Component) error {
 
 func main() {
 	router := gin.Default()
+	router.Static("/assets", "./assets")
 	router.GET("/", func(c *gin.Context) {
 		render(http.StatusOK, c, templates.Home())
 	})
